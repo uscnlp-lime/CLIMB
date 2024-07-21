@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CLIMB: A Benchmark of Clinical Bias in Large Language Models</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.1.0/dist/css/coreui.min.css" rel="stylesheet" integrity="sha384-OaSt6YlNk8f06OeGRPsV4UfP2F3Si8sd9Rqxt7iOdIsBKk+zbBLgwCyBwoBqLjDE" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.1.0/dist/js/coreui.bundle.min.js" integrity="sha384-fb63TspjFf2/L20tRe69tGsAXArSQe9u0yJ/9+5w1jbov1NYHiDv/+4Rdh2FSnEd" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CLIMB:A Benchmark of Clinical Bias in Large Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yb-z.github.io" target="_blank">Yubo Zhang</a>
+                <sup>*</sup>
+                <sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/shudi-hou/" target="_blank">Shudi Hou</a>
+                <sup>*</sup>
+                <sup style="color:#6fbf73;">1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://derek.ma/" target="_blank">Mingyu Derek Ma</a>
+                <sup style="color:#ed4b82;">2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://web.cs.ucla.edu/~weiwang/" target="_blank">Wei Wang</a>
+                <sup style="color:#ed4b82;">2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://muhaochen.github.io/" target="_blank">Muhao Chen</a>
+                <sup style="color:#ffac33">3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://jyzhao.net/" target="_blank">Jieyu Zhao</a>
+                <sup style="color:#6fbf73;">1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span><br>
+
+              <span class="author-block">
+                <sup style="color:#6fbf73;">1</sup>USC;
+                <sup style="color:#ed4b82;">2</sup>UCLA;
+                <sup style="color:#ffac33">3</sup>UC Davis</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2407.05250" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/uscnlp-lime/CLIMB" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset link -->
+                <span class="link-block">
+                  <a href="https://github.com/uscnlp-lime/CLIMB"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <p style="font-size:18px">📑</p>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+                <!-- Leaderboard link -->
+                <span class="link-block">
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large language models (LLMs) are increasingly applied to clinical decision-making. However, their
+              potential to exhibit bias poses significant risks to clinical equity. Currently, there is a lack of
+              benchmarks that systematically evaluate such clinical bias in LLMs. While in downstream tasks, some biases
+              of LLMs can be avoided such as by instructing the model to answer "I'm not sure...", the internal bias
+              hidden within the model still lacks deep studies. We introduce CLIMB (shorthand for A Benchmark of
+              <strong>Cli</strong>nical <strong>B</strong>ias in Large Language <strong>M</strong>odels), a pioneering
+              comprehensive benchmark to evaluate both intrinsic (within LLMs) and extrinsic (on downstream tasks) bias
+              in LLMs for clinical decision tasks. Notably, for intrinsic bias, we introduce a novel metric, AssocMAD,
+              to assess the disparities of LLMs across multiple demographic groups. Additionally, we leverage
+              counterfactual intervention to evaluate extrinsic bias in a task of clinical diagnosis prediction. Our
+              experiments across popular and medically adapted LLMs, particularly from the Mistral and LLaMA families,
+              unveil prevalent behaviors with both intrinsic and extrinsic bias. This work underscores the critical need
+              to mitigate clinical bias and sets a new standard for future evaluations of LLMs' clinical bias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Pipeline -->
+  <section class="hero is-light is-small" id="dataset">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1">
+        <span style="vertical-align: middle">Pipeline of CLIMB</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-centered">
+            <img src="static/images/pipeline.png" alt="pipeline">
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              In this version, we focus on the clinical bias associated and reflected in LLMs’ diagnostic capability. We
+              evaluate biases in LLMs through: 1) intrinsic bias, which explores inherent
+              disparities in LLMs, and 2) extrinsic bias, which evaluates demographic performance differences in a
+              specific downstream task (e.g., clinical dataset). <br>
+            </p>
+
+            <!-- <strong>General setups</strong> -->
+            <ul>
+              <li>
+                <strong>Diagnosis Decision Space</strong>: Diagnoses are identified by <a
+                  href="https://www.cms.gov/files/document/fy-2023-icd-10-cm-coding-guidelines-updated-01/11/2023.pdf"
+                  target="_blank" style="color: #083d8d;">International Classification of Diseases, Tenth Revision,
+                  Clinical Modification (ICD-10CM)</a> codes. It also categorizes
+                diagnoses from high (Level 1) to low (Level 5) levels: L1 - Chapters; L2 - Blocks; L3 - Categories;
+                L4 - Sub-categories; L5 - Full code.
+              </li>
+              <li>
+                <strong>Demographic Attributes</strong>: sex (Female and Male), ethnicity (White, Black, Hispanic, and
+                Asian) and insurance type.
+              </li>
+              <li>
+                <strong>Diagnostic Task and Dataset</strong>: Intrinsic bias examines associations between demographics
+                and diagnoses using people's names as proxies for different demographics, while extrinsic bias assesses
+                changes in model performance when demographic information in clinical notes is altered, using the
+                diagnosis task from <a href="https://clibench.github.io/" target="_blank"
+                  style="color: #083d8d;">CliBench</a> with real clinical cases from the MIMIC-IV database to evaluate
+                large language models' biases in realistic settings with a broad range of diagnosis options.
+              </li>
+              <li>
+                <strong>Demographic-specific Diagnosis</strong>: Demographic-specific diagnoses
+                (e.g., tuberculosis of cervix, a female-only diagnosis) need to be differentiated from genuine biases.
+                For sex-specific diagnosese, we utilize <a
+                  href="https://www.icd10data.com/ICD10CM/Codes/Rules/Female_Diagnosis_Codes" target="_blank"
+                  style="color: #083d8d;">female-only</a> and <a
+                  href="https://www.icd10data.com/ICD10CM/Codes/Rules/Male_Diagnosis_Codes" target="_blank"
+                  style="color: #083d8d;">male-only</a> codes defined in ICD-10-CM, resulting in 3,116 and 529 diagnoses
+                respectively. Identifying ethnicity-specific diagnoses is challenging because the absence of robust
+                clinical evidence, we leave it as future work and focus on sex-specific diagnoses.
+              </li>
+              <li>
+                <strong>Bias Quantifiaction</strong>: Intrinsic bias is evaluated using the metric AssocMAD to assess
+                disparities in LLMs' internal associations across multiple demographic groups, while extrinsic bias is
+                evaluated through counterfactual intervention to observe performance changes (extrinsic bias score) in
+                clinical diagnosis predictions. For more details, please refer to our paper.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End pipeline -->
+
+  <!-- Results of Intrinsic Bias -->
+  <section class="hero is-light is-small" id="dataset">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1">
+        <span style="vertical-align: middle">Results of Intrinsic Bias</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-centered">
+            <img src="static/images/intrinsic.png">
+          </div>
+          <div class="content has-text-justified">
+            <p>Overall intrinsic bias for sex-neutral diagnoses. A higher value means more biased. The column “Avg.” is
+              AssocMAD averaged across
+              all diagnosis group levels (from L1 to L5). The smallest and largest values of each granularity are in
+              underline and
+              bold, respectively.
+            </p>
+            
+            <div class="callout callout-info">
+              Our key findings include:
+              <ul>
+                <li>
+                  Overall, all models show smaller AssocMAD at a higher level.
+                </li>
+                <li>
+                  Interestingly, larger models such as Mistral Instruct v0.1 46.7B (#5), LLaMA2 Chat 13B (#9), and LLaMA3 Instruct 70B (#13) did not outperform their smaller 7B versions (#1, 6 and 11).
+                </li>
+                <li>
+                  Among medically adapted models, Meditron (7B) stands out with the lowest AssocMAD.
+                </li>
+                <li>
+                  Models pre-trained or fine-tuned on medical corpora with incorrect association may even introduce more intrinsic bias.
+                </li>
+              </ul>
+            </div>
+
+            <div class="content has-text-centered">
+              <img src="static/images/intrinsic2.png">
+            </div>
+            <p>Correctness of sex preference for sex-specific diagnoses, the larger the better. The columns
+              “Female”/“Male” denote female/male-only diagnoses. The largest correctness are highlighted in bold.</p>
+
+            <div class="callout callout-info">
+              Although some models demonstrate high correctness for either femaleonly or male-only diagnoses, they often fail to exhibit a balanced and reasonable sex preference for both.
+              <br>
+              For instance, LLaMA2 Chat 13B shows a high correctness of 0.94 for female-only diagnoses but a low correctness of 0.14 for male-only diagnoses. This indicates it still prefers females even for male-only diagnoses.
+            <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Results of Intrinsic Bias -->
+
+  <!-- Results of Extrinsic Bias -->
+  <section class="hero is-light is-small" id="dataset">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1">
+        <span style="vertical-align: middle">Results of Extrinsic Bias</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <em>Note: We conduct counterfactual intervention on all 199 instances with “white” ethnicity, “male” sex, and “other” insurance type (most privileged group) from <a href="https://clibench.github.io/" target="_blank"
+            style="color: #083d8d;">CliBench</a>'s evaluation set. For more details about the dataset, please refer to our paper.</em>
+          </div>
+          <div class="content has-text-centered">
+            <img src="static/images/extrinsic.png" alt="">
+          </div>
+          <div class="content has-text-justified">
+            <p>Extrinsic bias score of models when separately replacing sex, ethnicity and insurance. Numbers are
+              increased ( + ) or decreased ( − ) recall averaged across all diagnosis levels compared to the origin
+              (instances with “white” ethnicity, “male” sex, and “other” insurance type).
+              Zero numbers are expected for column “Insurance”, as it is not a causal factor of diagnosis compared to
+              sex and
+              ethnicity. The percentage represents the change as a proportion of the original recall rate.
+            </p>
+            <div class="callout callout-info">
+              Our key findings include:
+              <ul>
+                <li>
+                  We observed a consistent performance drop in almost all models when we provide counterfactual female sex information. However, when given counterfactual ethnicity or insurance, the results are mixed.
+                </li>
+                <li>
+                  Medically adapted LLMs are more sensitive to demographic information change.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content has-text-centered">
+            <img src="static/images/extrinsic2.png" alt="">
+          </div>
+          <div class="content has-text-justified">
+            <p>Extrinsic bias score separated into sex-neutral and sex-specific samples when only replacing sex. Zero
+              and negative numbers are expected for columns “Sex-neutral” and “Sex-specific” respectively.</p>
+
+            <div class="callout callout-info">
+              A performance drop is expected only in sex-specific samples, as these contain at least one male-specific diagnosis, which would naturally lead to decreased performance when the sex is changed to female. In contrast, models should not be sensitive to sex for sex-neutral samples, and any performance difference in these samples indicates sex bias.<br>
+              Our key findings include:
+              <ul>
+                <li>In sex-neutral samples, performance differences (i.e., sex bias) occur for all models.</li>
+                <li>In sex-specific samples, several models (# 7, 9 and 13) show counterintuitive performance increase.</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End Results of Extrinsic Bias -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{zhang2024climbbenchmarkclinicalbias,
+        title={CLIMB: A Benchmark of Clinical Bias in Large Language Models}, 
+        author={Yubo Zhang and Shudi Hou and Mingyu Derek Ma and Wei Wang and Muhao Chen and Jieyu Zhao},
+        year={2024},
+        eprint={2407.05250},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2407.05250}, 
+  }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
